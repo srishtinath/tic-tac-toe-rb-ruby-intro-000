@@ -95,11 +95,9 @@ def full?(board)
 end
 
 def draw?(board)
-  if full?(board) && (won?(board) == false)
+  if !won?(board) && full?(board)
     return true
-  elsif !won?(board) && !full?(board)
-    return false
-  elsif won?(board)
+  else
     return false
   end
 end
@@ -135,7 +133,7 @@ def play(board)
   end
 
   if won?(board)
-    puts "Congratulations on winning, #{winner(board)}!"
+    puts "Congratulations, #{winner(board)}!"
   elsif draw?(board)
     puts "It was a draw!"
   end
