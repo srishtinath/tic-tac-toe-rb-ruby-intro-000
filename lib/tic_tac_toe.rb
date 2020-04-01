@@ -56,6 +56,24 @@ def turn(board)
     end
 end
 
+def turn_count(board)
+  counter = 0
+  board.each do |value|
+    if (value == "X" || value == "O")
+      counter +=1
+    end
+  end
+  return counter
+end
+
+def current_player(board)
+  if turn_count(board) % 2 != 0
+    return "O"
+  else
+    return "X"
+  end
+end
+
 def won?(board)
   WIN_COMBINATIONS.each { |win_combination|
     value_1 = board[win_combination[0]]
@@ -68,8 +86,7 @@ def won?(board)
 
   }
   return false
-end # close def
-# need to figure out empty board and draw
+end
 
 def full?(board)
   board.all? do |value|
