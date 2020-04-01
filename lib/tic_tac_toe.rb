@@ -22,8 +22,8 @@ def input_to_index(input)
   index = input.to_i - 1
 end
 
-def move(board, index, character = "X")
-  board[index] = character
+def move(board, index, current_player)
+  board[index] = current_player
   return board
 end
 
