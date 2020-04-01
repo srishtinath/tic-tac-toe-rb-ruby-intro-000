@@ -19,7 +19,7 @@ def display_board(board)
 end
 
 def input_to_index(input)
-  index = input.to_i - 1
+  input.to_i - 1
 end
 
 def move(board, index, current_player)
