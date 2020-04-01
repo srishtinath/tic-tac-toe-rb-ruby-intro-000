@@ -130,8 +130,8 @@ def play(board)
   until over?(board) == true
     turn(board)
   end
-  
-  if won?(board) 
+
+  if won?(board)
     puts "Congratulations on winning, #{winner(board)}!"
   elsif draw?(board)
     puts "It was a draw!"
