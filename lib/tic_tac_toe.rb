@@ -31,6 +31,17 @@ def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
 
+def valid_move?(board, index)
+  if index >= 0 && index <= 8
+    if position_taken?(board,index) == false
+      true
+    else
+      false
+    end
+  else
+    false
+  end
+
 def won?(board)
   WIN_COMBINATIONS.each { |win_combination|
     value_1 = board[win_combination[0]]
