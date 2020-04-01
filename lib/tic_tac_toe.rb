@@ -42,6 +42,8 @@ def valid_move?(board, index)
     false
   end
 
+
+
 def won?(board)
   WIN_COMBINATIONS.each { |win_combination|
     value_1 = board[win_combination[0]]
