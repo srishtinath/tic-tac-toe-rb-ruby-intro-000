@@ -125,3 +125,11 @@ def winner(board)
   end
 
 end
+
+def play
+  until over?(board) == true
+    turn(board)
+  end
+
+  
+end
