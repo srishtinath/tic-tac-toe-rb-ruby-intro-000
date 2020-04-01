@@ -130,11 +130,11 @@ def play
   until over?(board) == true
     turn(board)
   end
-  if winner(board).nil?
-    
-     == "X" || winner(board) == "O"
-    puts "Congratulations!"
-
+  if winner(board) == "X" || winner(board) == "O"
+    puts "Congratulations on winning, player #{winner(board)}!"
+  elsif winner(board).nil?
+      puts "It was a draw!"
+    else
 
   end
 
