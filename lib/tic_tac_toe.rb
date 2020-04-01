@@ -89,9 +89,7 @@ def won?(board)
 end
 
 def full?(board)
-  board.all? do |value|
-    value == "X" || value == "O"
-  end
+  board.all? {|value| value == "X" || value == "O" }
 end
 
 def draw?(board)
