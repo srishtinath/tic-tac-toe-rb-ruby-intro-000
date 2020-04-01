@@ -134,7 +134,7 @@ def play(board)
     elsif winner(board) == "O"
       puts "Congratulations on winning, player 2!"
     elsif winner(board).nil?
-        puts "It was a draw!"
+      puts "It was a draw!"
     end
   end
 end
