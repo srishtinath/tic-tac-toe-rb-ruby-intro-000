@@ -134,8 +134,8 @@ def play
     
      == "X" || winner(board) == "O"
     puts "Congratulations!"
-    
-    
+
+
   end
 
 end
