@@ -131,7 +131,7 @@ def play(board)
     turn(board)
     if winner(board) == "X"
       puts "Congratulations on winning, player 1!"
-    if winner(board) == "O"
+    elsif winner(board) == "O"
       puts "Congratulations on winning, player 2!"
     elsif winner(board).nil?
         puts "It was a draw!"
