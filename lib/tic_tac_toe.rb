@@ -54,6 +54,8 @@ def turn(board)
   elsif valid_move?(board,index) == false
     puts "Please enter valid number."
     turn(board)
+  else
+    turn(board)
   end
 end
 
