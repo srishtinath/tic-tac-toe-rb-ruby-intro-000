@@ -127,16 +127,14 @@ def winner(board)
 end
 
 def play(board)
-  input = gets
-  until over?(board)
+  until over?(board) == true
     turn(board)
-    if winner(board) == "X"
-      puts "Congratulations on winning, player 1!"
-      elsif winner(board) == "O"
-        puts "Congratulations on winning, player 2!"
-      elsif winner(board).nil?
-        puts "It was a draw!"
-    end
   end
-end
+  
+  if won?(board) 
+    puts "Congratulations on winning, #{winner(board)}!"
+  elsif draw?(board)
+    puts "It was a draw!"
+  end
+  
 end
